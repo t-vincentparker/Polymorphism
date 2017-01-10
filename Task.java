@@ -5,15 +5,15 @@
  * 
 */
 
-public class Task implements Priority
+public class Task implements Priority, Comparable<Task>
 {
 	
 	private String taskmessage;
-	private int prioritylevel;
+	private String prioritylevel;
 	
 	
 	// Constructor: Stores task message and initial priority level
-	public Task(int plevel, String tmessage)
+	public Task(String plevel, String tmessage)
 	{
 		
 		prioritylevel = plevel;
@@ -21,26 +21,37 @@ public class Task implements Priority
 		
 	}
 	
-	public void setPriority(int x)
+	public String setPriority(String x)
 	{
 		prioritylevel = x;
+		return prioritylevel;
 		
 	}
 	
-	public int getPriority()
+	public String getPriority()
 	{
 		return prioritylevel;
 	}
 	
-	public int compareTo()
+	public int compareTo(Task other)
 	{
-		if (plevel.comareTo(comptask.getPriority()) > 0)
-			
+		if (prioritylevel.equals(other.getPriority()))
+			 System.out.println("Tasks are equal priority.");
+		if (prioritylevel.compareTo(other.getPriority()) < 0 )
+			 System.out.println("Task priority is less than the compared task.");
+		if (prioritylevel.compareTo(other.getPriority()) > 0)
+			 System.out.println("Task priority is greater than the compared task.");
+		return 0;
+	
 	}
 	
-	{
+	
 		
 
-	}
+
+	
+
+	
+	
 
 }
