@@ -8,9 +8,9 @@
 public interface Priority 
 {
 
-	public int setPriority();
+	public String setPriority();
 	
-	public int getPriority();	
+	public String getPriority();	
 	
 
 }
