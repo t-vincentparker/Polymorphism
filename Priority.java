@@ -8,7 +8,7 @@
 public interface Priority 
 {
 
-	public String setPriority();
+	public String setPriority(String p);
 	
 	public String getPriority();	
 	
