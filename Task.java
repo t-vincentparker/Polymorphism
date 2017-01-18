@@ -18,13 +18,15 @@ public class Task implements Priority, Comparable<Task>
 	{
 		this.plevel = plevel;
 		this.tmessage = tmessage;
-	}
+	} 
 	
 	
 	// Method to set priority level
-	public String setPriority()
+	public String setPriority( String p )
 	{
-				return plevel;
+		plevel = p;
+		
+		return plevel;
 	}
 	
 	
@@ -53,10 +55,14 @@ public class Task implements Priority, Comparable<Task>
 	//Compare to method which compares priority levels of tasks
 	public int compareTo(Task other)
 	{
-		return plevel.compareTo( other.plevel);
-   }
+	return plevel.compareTo( other.plevel);
+    }
 
-	
+	//
+	public String toString()
+	{
+		return "Priority: "+ getPriority() + "\t"+ getTaskmessage();
+	}
 	
 	
 	
